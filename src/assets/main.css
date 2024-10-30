@@ -1,0 +1,38 @@
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.walpaper{
+    background-image: url('/src/assets/images/wal.jpg');
+    background-repeat: no-repeat;
+}
+
+
+.default{
+    background-image: url('/src/assets/images/blue.png');
+    background-repeat: no-repeat;
+}
+
+.black{
+    background-image: url('/src/assets/images/black.jpg');
+    background-repeat: no-repeat;
+}
+
+.green{
+    background-image: url('/src/assets/images/green.jpg');
+    background-repeat: no-repeat;
+}
+
+
+.orange{
+    background-image: url('/src/assets/images/orange.jpg');
+    background-repeat: no-repeat;
+}
+
+
+.pink{
+    background-image: url('/src/assets/images/pink.jpg');
+    background-repeat: no-repeat;
+}
