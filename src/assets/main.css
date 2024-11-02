@@ -36,3 +36,7 @@
     background-image: url('/src/assets/images/pink.jpg');
     background-repeat: no-repeat;
 }
+
+.caret-none{
+    caret-color: transparent;
+}

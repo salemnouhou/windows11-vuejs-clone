@@ -37,10 +37,10 @@
 
     <div class="absolute bottom-2 flex justify-center items-center w-full">
       <div class="max-w-screen-xl gap-4 px-14 py-4 w-3/4 grid grid-cols-4">
-        <Weather />
-        <Exchange />
-        <Map />
-        <Sports />
+        <Weather class="cursor-pointer hover:scale-105 transition duration-500" />
+        <Exchange class="cursor-pointer hover:scale-105 transition duration-500" />
+        <Map class="cursor-pointer hover:scale-105 transition duration-500" />
+        <Sports class="cursor-pointer hover:scale-105 transition duration-500" />
       </div>
     </div>
   </div>

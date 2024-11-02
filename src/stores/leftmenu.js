@@ -1,9 +1,8 @@
 import { defineStore } from 'pinia'
 
-export const useMenuStore = defineStore('menu', {
+export const useleftMenuStore = defineStore('leftmenu', {
   state: () => ({
     isActive: false,
-    name : "Salem",
   }),
   actions: {
     toggleMenu() {

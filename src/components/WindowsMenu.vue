@@ -16,7 +16,7 @@
       </div>
       <div></div>
       <MenuSoftwares />
-      <Recommended />
+      <!-- <Recommended /> -->
     </div>
 
     <div
