@@ -1,7 +1,8 @@
 <template>
-  <div class="md:flex">
+  <div class="md:flex" >
     <div class="flex-1 flex">
       <button
+      ref="leftElementRef"
         @click="leftMenuStore.toggleMenu"
         class="transition duration-700 focus:outline-none hover:bg-black/15 rounded-r-l"
       >
@@ -104,6 +105,7 @@
     </div>
     <div class="flex-1 flex justify-center gap-2 items-center">
       <button
+      ref="elementRef"
         @click="menuStore.toggleMenu"
         class="focus:outline-none transition duration-700 flex justify-center items-center p-2 rounded-md hover:bg-black/15"
       >
@@ -300,6 +302,8 @@
       </button>
 
       <button
+      @click="menuStore.showAbout"
+
         class="transition duration-700 focus:outline-none flex justify-center items-center p-2 rounded-md hover:bg-black/15"
       >
         <svg
@@ -481,7 +485,9 @@
       <div
         class="transition duration-700 focus:outline-none flex-1 flex justify-end items-center px-6"
       >
-        <button @click="rightMenuStore.toggleMenu" class="hover:bg-black/15 rounded-l-md">
+        <button
+        ref="rightElementRef"
+         @click="rightMenuStore.toggleMenu" class="hover:bg-black/15 rounded-l-md">
           <svg
             width="180"
             height="41"
@@ -549,16 +555,37 @@
 </template>
 
 <script setup>
+
 import { useMenuStore } from "@/stores/menu.js";
-
 const menuStore = useMenuStore();
-
 import { useleftMenuStore } from "@/stores/leftmenu.js";
-
 const leftMenuStore = useleftMenuStore();
-
 import { useRightMenuStore } from "@/stores/rightmenu.js";
 const rightMenuStore = useRightMenuStore();
+
+import { useClickOutside } from "@/composables/useClickOutside";
+import { useClickOutsideLeft } from "@/composables/useClickOutsideLeft";
+import { useClickOutsideRight } from "@/composables/useClickOutsideRight";
+
+function handleClickOutside() {
+    menuStore.disableMenu()
+}
+
+function handleClickOutsideLeft() {
+
+leftMenuStore.disableLeftMenu()
+}
+
+
+function handleClickOutsideRight() {
+
+rightMenuStore.disableRightMenu()
+}
+
+const { elementRef } = useClickOutside(handleClickOutside);
+const { leftElementRef } = useClickOutsideLeft(handleClickOutsideLeft);
+const { rightElementRef } = useClickOutsideRight(handleClickOutsideRight);
+
 </script>
 
 <style></style>

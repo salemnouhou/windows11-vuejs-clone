@@ -3,8 +3,10 @@
       <div
         class="rounded-t-md bg-[#545454A3]/60  w-full relative"
       >
-      <div class="h-10 flex justify-center items-center p-2 rounded-md bg-zinc-800 w-10  absolute right-2 top-1">
-        <img class="rounded-full" src="/src/assets/images/profil.jpeg" alt="">
+      <div class="h-10 flex justify-center items-center p-2 rounded-md uppercase bg-zinc-800 w-10  absolute right-2 top-1">
+       <div class="  bg-cyan-400 flex justify-center items-center w-full h-full bg- rounded-full">
+        {{ firstLetter }}
+        </div>
 
     </div>
       
@@ -35,12 +37,15 @@
   <script setup>
   import { useleftMenuStore } from "@/stores/leftmenu.js";
   const leftMenuStore = useleftMenuStore();
+  import { useUserStore } from "@/stores/user";
+const userStore = useUserStore();
+const firstLetter = computed(()=>userStore.username.charAt(0))
 
   import MenuInput from "./MenuInput.vue";
   import MenuSoftwares from "./MenuSoftwares.vue";
   import Recommended from "./Recommended.vue";
   import { onMounted } from "vue";
-  import { ref } from 'vue'
+  import { ref,computed } from 'vue'
 import Menucard from "./Menucard.vue";
 
 const time = ref("");

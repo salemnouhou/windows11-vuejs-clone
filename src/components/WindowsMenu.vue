@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="" >
     <div
       class="rounded-t-md backdrop-blur-lg bg-zinc-900/45 absolute h-[91%] w-full"
     >
@@ -16,21 +16,19 @@
       </div>
       <div></div>
       <MenuSoftwares />
-      <!-- <Recommended /> -->
     </div>
 
     <div
       class="flex justify-between items-center px-14 rounded-b-md absolute bottom-0 h-[9%] backdrop-blur-lg bg-zinc-900/65 w-full"
     >
       <div class="flex items-center gap-3">
-        <div class="h-8 w-8 rounded-full">
-          <img
-            class="rounded-full"
-            src="/src/assets/images/profil.jpeg"
-            alt=""
-          />
+        <div class=" bg-cyan-400 flex justify-center items-center h-8 w-8 rounded-full  ">
+          
+          <span class="text-xl font-thin uppercase">{{firstLetter}}</span>
+    
+
         </div>
-        <span class="text-white">{{ menuStore.name }}</span>
+        <span class="text-white">{{ userStore.username }}</span>
       </div>
       <div>
         <button>
@@ -52,11 +50,17 @@
 </template>
 
 <script setup>
-import { useMenuStore } from "@/stores/menu.js";
 import MenuInput from "./MenuInput.vue";
 import MenuSoftwares from "./MenuSoftwares.vue";
 import Recommended from "./Recommended.vue";
-const menuStore = useMenuStore();
+
+import { useUserStore } from "@/stores/user";
+const userStore = useUserStore();
+
+import { computed } from "vue";
+const firstLetter = computed(()=>userStore.username.charAt(0))
+
+
 </script>
 
 <style></style>

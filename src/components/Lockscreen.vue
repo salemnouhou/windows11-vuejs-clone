@@ -1,5 +1,6 @@
 <template>
   <div class="relative w-full h-screen">
+    
     <div class="absolute inset-0 bg-cover bg-center filter blur "
     :class="{default: colorStore.currentColor ==='default',
      orange: colorStore.currentColor ==='orange',
@@ -26,19 +27,28 @@
       </svg>
 
       </div>
-      <div class=" w-48 max-w-48 h-10 max-h-10">
-        <input
-        v-model="inputValue"
-         class="w-full h-full bg-transparent placeholder:text-center placeholder:text-2xl focus:outline-none text-3xl text-center caret-none" placeholder="Entrez votre nom" type="text" name="" id="">
-      </div>
 
-      <button
-        @click="$emit('unlock')"
-        class="mt-10 px-6 py-2 bg-black bg-opacity-50 hover:bg-opacity-75 rounded-lg"
-      >
-        Déverrouiller
-      </button>
-      <div class="py-8 flex gap-4 justify-center items-center">
+      <form class="flex flex-col"  @submit.prevent="handleSubmit">
+  <div class="w-48 max-w-48 h-10 max-h-10">
+    <input
+      v-model="inputValue"
+      required
+      class="w-full h-full bg-transparent placeholder:text-center placeholder:text-2xl focus:outline-none text-3xl text-center caret-none"
+      placeholder="Entrez votre nom"
+      type="text"
+    />
+  </div>
+
+  <button
+    type="submit"
+    
+    class="mt-10 px-6 py-2 bg-black bg-opacity-50 hover:bg-opacity-75 rounded-lg"
+  >
+    Déverrouiller
+  </button>
+</form>
+
+<!-- <div class="py-8 flex gap-4 justify-center items-center">
         <div
           class="h-8 w-8 border border-gray-600 rounded-full flex justify-center items-center"
         >
@@ -90,18 +100,28 @@
         </div>
       </button> 
 
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script setup>
+// @click="$emit('unlock')"
+import { useUserStore } from "@/stores/user";
+const userStore = useUserStore();
 import { ref, onMounted, computed } from "vue";
 const time = ref("");
 const date = ref("");
 import { useColorStore } from "@/stores/color";
 
 const colorStore = useColorStore()
+const emit = defineEmits(['unlock']);
+const  handleSubmit =()=> {
+  if (inputValue.value.trim()) {
+    userStore.setUserName(inputValue.value)
+    emit('unlock');
+  }
+}
 
 const inputValue = ref('')
 const firstLetter = computed(()=>inputValue.value.charAt(0))

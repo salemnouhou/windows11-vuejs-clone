@@ -8,5 +8,8 @@ export const useleftMenuStore = defineStore('leftmenu', {
     toggleMenu() {
       this.isActive = !this.isActive;
     },
+    disableLeftMenu() {
+      this.isActive = false;
+    },
   },
 });

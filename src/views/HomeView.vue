@@ -20,7 +20,7 @@ const colorStore = useColorStore();
 const rightMenuStore = useRightMenuStore();
 import About from "@/components/About.vue";
 const datas = ref([
-  { name: 'About', image: '/src/assets/images/folder.png' },
+  // { name: 'About', image: '/src/assets/images/folder.png' },
   { name: 'Terminal', image: '/src/assets/images/terminal.png' },
   { name: 'Power', image: '/src/assets/images/power.png' },
   { name: 'Edge', image: '/src/assets/images/edge.png' },
@@ -28,6 +28,9 @@ const datas = ref([
   { name: 'vsCode', image: '/src/assets/images/code.png' },
   { name: 'OneNote', image: '/src/assets/images/note.png' }
 ]);
+
+const about = ref(false)
+
 
 
 
@@ -70,7 +73,7 @@ const datas = ref([
         </draggable>
         
         <div class=" w-full    flex justify-center items-center">
-          <About  />
+          <About v-if="menuStore.about"  />
       </div>
       </div>
         
@@ -112,7 +115,7 @@ const datas = ref([
 <style>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.8s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .v-enter-from,
