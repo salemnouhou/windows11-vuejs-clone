@@ -14,7 +14,7 @@
           class="h-8 w-8 border border-gray-600 rounded-full flex justify-center items-center"
         >
 
-       <button @click="colorStore.toggleColor('default')">
+       <button @click="colorStore.toggleColor('blue')">
         <div
             class="h-4 w-4 hover:scale-150 cursor-pointer transition duration-700 ease-in-out rounded-full bg-blue-600"
           ></div>
@@ -51,7 +51,7 @@
         </div>
       </button> 
 
-      <button @click="colorStore.toggleColor('green')"> 
+      <button @click="colorStore.toggleColor('default')"> 
           <div
           class="h-8 w-8 border rounded-full border-gray-600 flex justify-center items-center"
         >

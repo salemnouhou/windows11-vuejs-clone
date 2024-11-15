@@ -31,6 +31,7 @@
       <form class="flex flex-col"  @submit.prevent="handleSubmit">
   <div class="w-48 max-w-48 h-10 max-h-10">
     <input
+      autofocus
       v-model="inputValue"
       required
       class="w-full h-full bg-transparent placeholder:text-center placeholder:text-2xl focus:outline-none text-3xl text-center caret-none"
@@ -48,82 +49,48 @@
   </button>
 </form>
 
-<!-- <div class="py-8 flex gap-4 justify-center items-center">
-        <div
-          class="h-8 w-8 border border-gray-600 rounded-full flex justify-center items-center"
-        >
-
-       <button @click="colorStore.toggleColor('default')">
-        <div
-            class="h-4 w-4 hover:scale-150 cursor-pointer transition duration-700 ease-in-out rounded-full bg-blue-600"
-          ></div>
-        </button> 
-
-        </div>
-
-      
-      <button @click="colorStore.toggleColor('orange')"> <div
-          class="h-8 w-8 border rounded-full border-gray-600 flex justify-center items-center"
-        >
-          <div
-            class="h-4 w-4 hover:scale-150 cursor-pointer transition duration-700 ease-in-out rounded-full bg-orange-500"
-          ></div>
-        </div>
-      </button> 
-
-       <button @click="colorStore.toggleColor('black')">  <div
-          class="h-8 w-8 border rounded-full border-gray-600 flex justify-center items-center"
-        >
-          <div
-            class="h-4 w-4 hover:scale-150 cursor-pointer transition duration-700 ease-in-out rounded-full bg-zinc-900"
-          ></div>
-        </div>
-      </button> 
-
-       <button @click="colorStore.toggleColor('pink')"> 
-        <div
-          class="h-8 w-8 border rounded-full border-gray-600 flex justify-center items-center"
-        >
-          <div
-            class="h-4 w-4 hover:scale-150 cursor-pointer transition duration-700 ease-in-out rounded-full bg-pink-500"
-          ></div>
-        </div>
-      </button> 
-
-      <button @click="colorStore.toggleColor('green')"> 
-          <div
-          class="h-8 w-8 border rounded-full border-gray-600 flex justify-center items-center"
-        >
-          <div
-            class="h-4 w-4 hover:scale-150 cursor-pointer transition duration-700 ease-in-out rounded-full bg-green-400"
-          ></div>
-        </div>
-      </button> 
-
-      </div> -->
     </div>
   </div>
 </template>
 
 <script setup>
-// @click="$emit('unlock')"
+import sound from '../sounds/logon.mp3'
 import { useUserStore } from "@/stores/user";
 const userStore = useUserStore();
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed, nextTick } from "vue";
 const time = ref("");
 const date = ref("");
 import { useColorStore } from "@/stores/color";
 
 const colorStore = useColorStore()
 const emit = defineEmits(['unlock']);
+
+const audio = new Audio(sound)
+const inputValue = ref('')
+
+// onMounted(() => {
+//   nextTick(() => {
+//     if (inputValue.value) {
+//       inputValue.value.focus();
+//     }
+//   });
+// });
+
 const  handleSubmit =()=> {
   if (inputValue.value.trim()) {
     userStore.setUserName(inputValue.value)
+    setTimeout(()=>{
+
+      audio.play()
+
+    },25);
     emit('unlock');
+
+
+
   }
 }
 
-const inputValue = ref('')
 const firstLetter = computed(()=>inputValue.value.charAt(0))
 
 

@@ -199,6 +199,8 @@
         </svg>
       </button>
 
+    
+
       <button
         class="transition duration-700 focus:outline-none flex justify-center items-center p-2 rounded-md hover:bg-black/15"
       >
@@ -241,6 +243,7 @@
         </svg>
       </button>
 
+   
       <button
         class="transition duration-700 focus:outline-none flex justify-center items-center p-2 rounded-md hover:bg-black/15"
       >
@@ -481,6 +484,8 @@
           </defs>
         </svg>
       </button>
+
+   
     </div>
       <div
         class="transition duration-700 focus:outline-none flex-1 flex justify-end items-center px-6"
