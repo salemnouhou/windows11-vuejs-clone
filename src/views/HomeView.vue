@@ -23,12 +23,12 @@ import About from "@/components/About.vue";
 const datas = ref([
   // { name: 'About', image: '/src/assets/images/folder.png' },
   { name: "LinkedIn", image: "/assets/images/LinkedIn.png" },
-  { name: "Github", image: "../src/assets/images/github.svg" },
-  { name: "Terminal", image: "../src/assets/images/terminal.png" },
-  { name: "Power", image: "../src/assets/images/power.png" },
-  { name: "Spotify", image: "../src/assets/images/spotify.png" },
-  { name: "vsCode", image: "../src/assets/images/code.png" },
-  { name: "OneNote", image: "../src/assets/images/note.png" },
+  { name: "Github", image: "/assets/images/github.svg" },
+  { name: "Terminal", image: "/assets/images/terminal.png" },
+  { name: "Power", image: "/assets/images/power.png" },
+  { name: "Spotify", image: "/assets/images/spotify.png" },
+  { name: "vsCode", image: "/assets/images/code.png" },
+  { name: "OneNote", image: "/assets/images/note.png" },
 ]);
 
 const about = ref(false);
