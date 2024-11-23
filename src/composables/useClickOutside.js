@@ -13,6 +13,7 @@ export function useClickOutside(callback) {
     document.addEventListener('click', handleClickOutside);
   });
 
+  
   onUnmounted(() => {
     document.removeEventListener('click', handleClickOutside);
   });
