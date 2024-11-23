@@ -22,7 +22,7 @@ const rightMenuStore = useRightMenuStore();
 import About from "@/components/About.vue";
 const datas = ref([
   // { name: 'About', image: '/src/assets/images/folder.png' },
-  { name: "LinkedIn", image: "../src/assets/images/LinkedIn.png" },
+  { name: "LinkedIn", image: "/assets/images/LinkedIn.png" },
   { name: "Github", image: "../src/assets/images/github.svg" },
   { name: "Terminal", image: "../src/assets/images/terminal.png" },
   { name: "Power", image: "../src/assets/images/power.png" },
