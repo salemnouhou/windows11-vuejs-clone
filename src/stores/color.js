@@ -6,7 +6,7 @@ export const useColorStore = defineStore('color', {
   }),
   actions: {
     toggleColor(color) {
-      console.log(this.currentColor);
+      // console.log(this.currentColor);
 
       this.currentColor = color;
     },

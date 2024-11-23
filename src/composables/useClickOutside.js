@@ -1,4 +1,3 @@
-// src/composables/useClickOutside.js
 import { onMounted, onUnmounted, ref } from 'vue';
 
 export function useClickOutside(callback) {

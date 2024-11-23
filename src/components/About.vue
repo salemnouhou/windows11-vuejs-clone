@@ -51,7 +51,10 @@
       <div class="flex justify-end items-center flex-1 h-full">
         <button class="w-10 h-full text-white hover:bg-gray-700/45">-</button>
         <button class="w-10 h-full text-white hover:bg-gray-700/45">+</button>
-        <button @click="menuStore.closeAbout" class="w-10 h-full text-white rounded-tr-md hover:bg-red-600">
+        <button
+          @click="menuStore.closeAbout"
+          class="w-10 h-full text-white rounded-tr-md hover:bg-red-600"
+        >
           x
         </button>
       </div>
@@ -134,104 +137,157 @@
             />
           </svg>
         </button>
-        
       </div>
       <div class="col-span-6 py-1 px-2">
-        <div class="h-full w-full rounded-md bg-gray-700/45 flex items-center px-2 text-xs gap-1 text-gray-400">
-        
-        <span class=" p-1 hover:bg-gray-700 rounded-md" > Ce PC</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-      </svg>
+        <div
+          class="h-full w-full rounded-md bg-gray-700/45 flex items-center px-2 text-xs gap-1 text-gray-400"
+        >
+          <span class="p-1 hover:bg-gray-700 rounded-md"> Ce PC</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
 
-      <span class=" p-1 hover:bg-gray-700 rounded-md" >Salem</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-      </svg>
+          <span class="p-1 hover:bg-gray-700 rounded-md">Salem</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
 
-      <span class=" p-1 hover:bg-gray-700 rounded-md" > Documents</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-      </svg>
+          <span class="p-1 hover:bg-gray-700 rounded-md"> Documents</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
 
-      <span class=" p-1 bg-gray-700 rounded-md" >Portfolio</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-      </svg>
-      
-
-        
+          <span class="p-1 bg-gray-700 rounded-md">Portfolio</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
         </div>
       </div>
       <div class="col-span-4 py-1 px-2">
-        <div class="h-full w-full rounded-md bg-gray-700/45 flex items-center px-2 text-xs gap-2 text-gray-400">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-  </svg>
+        <div
+          class="h-full w-full rounded-md bg-gray-700/45 flex items-center px-2 text-xs gap-2 text-gray-400"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
 
-  <span>Rechercher dans : Portolio</span>
-
+          <span>Rechercher dans : Portolio</span>
         </div>
       </div>
     </div>
-    <div class=" h-[84%] grid grid-cols-5 bg-black/70  backdrop-blur-xl">
-      <div class="border-r border-gray-600 col-span-1 text-gray-300 p-2 flex flex-col gap-4">
-        <button 
-        @click="changeContent('apropos')"
-        class=" w-full border border-gray-600 hover:bg-gray-300 hover:text-black flex px-4 rounded-md ">
+    <div class="h-[84%] grid grid-cols-5 bg-black/70 backdrop-blur-xl">
+      <div
+        class="border-r border-gray-600 col-span-1 text-gray-300 p-2 flex flex-col gap-4"
+      >
+        <button
+          @click="changeContent('apropos')"
+          class="w-full border border-gray-600 hover:bg-gray-300 hover:text-black flex px-4 rounded-md"
+        >
           A Propos
         </button>
 
         <button
-         @click="changeContent('parcours')"
-         class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md">
+          @click="changeContent('parcours')"
+          class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md"
+        >
           Parcours
         </button>
 
         <button
-        
-        @click="changeContent('skills')"
-        
-        class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md">
+          @click="changeContent('skills')"
+          class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md"
+        >
           Skills
         </button>
 
         <button
-        
-        @click="changeContent('realisations')"
-        class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md">
+          @click="changeContent('realisations')"
+          class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md"
+        >
           Réalisations
         </button>
 
         <button
-        
-        @click="changeContent('resume')"
-        
-        class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md">
+          @click="changeContent('resume')"
+          class="border border-gray-600 hover:bg-gray-300 hover:text-black w-full flex px-4 rounded-md"
+        >
           Resume
         </button>
       </div>
-      <component class="h-full col-span-4 " :is="currentComponent"></component>
+      <component class="h-full col-span-4" :is="currentComponent"></component>
     </div>
     <!-- NAVIGATIONS ENDS HERE -->
-  
   </div>
-  
 </template>
 
 <script setup>
-import Apropos from './portfolio/Apropos.vue';
-import Parcours from './portfolio/Parcours.vue';
-import Skills from './portfolio/Skills.vue';
-import Realisations from './portfolio/Realisations.vue';
-import Resume from './portfolio/Resume.vue';
-import { ref,computed } from 'vue';
+import Apropos from "./portfolio/Apropos.vue";
+import Parcours from "./portfolio/Parcours.vue";
+import Skills from "./portfolio/Skills.vue";
+import Realisations from "./portfolio/Realisations.vue";
+import Resume from "./portfolio/Resume.vue";
+import { ref, computed } from "vue";
 import { useMenuStore } from "@/stores/menu.js";
 
 const menuStore = useMenuStore();
 
 function changeContent(content) {
-  currentContent.value = content
+  currentContent.value = content;
 }
 
 const components = {
@@ -240,11 +296,9 @@ const components = {
   skills: Skills,
   realisations: Realisations,
   resume: Resume,
-}
+};
 
-const currentContent = ref('apropos')
-const currentComponent = computed(() => components[currentContent.value])
-
-
+const currentContent = ref("apropos");
+const currentComponent = computed(() => components[currentContent.value]);
 </script>
 <style></style>

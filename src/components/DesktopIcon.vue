@@ -28,11 +28,8 @@ const double = () => {
       "https://www.linkedin.com/in/salem-souleymane-nouhou/",
       "_blank"
     );
-  }else if(props.name==="Github"){
-    window.open(
-      "https://github.com/salemnouhou",
-      "_blank"
-    );
+  } else if (props.name === "Github") {
+    window.open("https://github.com/salemnouhou", "_blank");
   }
 };
 </script>
