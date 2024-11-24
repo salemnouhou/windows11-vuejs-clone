@@ -28,7 +28,6 @@ Une tentative ambitieuse de recréer l'interface utilisateur élégante de Windo
 ---
 
 ## 📸 Aperçu  
-*(Ajoute ici quelques captures d'écran pour montrer l'interface)*  
 
 ![Aperçu 1](https://i.imgur.com/LkrjAei.jpeg)  
 ![Aperçu 2](https://i.imgur.com/GCSHttQ.jpeg)  
