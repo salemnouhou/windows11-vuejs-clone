@@ -25,13 +25,13 @@
       <div
         class="py-2 px-4 grid grid-cols-2 text-white auto-rows-[130px] gap-2"
       >
-        <Menucard image="/src/assets/images/weather.png" />
-        <Menucard image="/src/assets/images/trafic.png" />
-        <Menucard image="/src/assets/images/movers.png" />
+        <Menucard image="/assets/images/weather.png" />
+        <Menucard image="/assets/images/trafic.png" />
+        <Menucard image="/assets/images/movers.png" />
 
-        <Menucard image="/src/assets/images/outlook.png" class="row-span-2" />
-        <Menucard image="/src/assets/images/photos.png" class="row-span-2" />
-        <Menucard image="/src/assets/images/todo.png" />
+        <Menucard image="/assets/images/outlook.png" class="row-span-2" />
+        <Menucard image="/assets/images/photos.png" class="row-span-2" />
+        <Menucard image="/assets/images/todo.png" />
       </div>
     </div>
   </div>
